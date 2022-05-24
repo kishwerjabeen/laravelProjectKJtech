@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DemoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,7 +13,16 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function(){
+
+Route::get('/',[DemoController::class, 'index']);
+// anoothe but long method but its not a good practice 
+Route::get('/about', 'App\Http\Controllers\DemoController@about');
+
+
+
+
+
+/* Route::get('/', function(){
     return view('index');
 });
 
@@ -25,7 +35,7 @@ Route::get('/courses', function(){
     return view('courses');
 });
 
-
+ */
 
 
 
