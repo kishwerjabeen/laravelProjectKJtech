@@ -9,6 +9,6 @@
     
 
 <h1 class="text-center">
-courses PAge
+courses PAge Hello
 </h1>
 @endsection

@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DemoController;
+use App\Http\Controllers\SingleActionController;
+use App\Http\Controllers\ResourcePhotoController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -17,12 +20,13 @@ use App\Http\Controllers\DemoController;
 Route::get('/',[DemoController::class, 'index']);
 // anoothe but long method but its not a good practice 
 Route::get('/about', 'App\Http\Controllers\DemoController@about');
+// Single Action
+Route::get('/courses',SingleActionController::class);
 
+// ReSource Controller
+Route::resource('photo',ResourcePhotoController::class);
 
-
-
-
-/* Route::get('/', function(){
+/* Route::get('/', function(){  
     return view('index');
 });
 
